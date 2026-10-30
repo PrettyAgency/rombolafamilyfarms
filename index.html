@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rombola Family Farms - Australian family farming, from the field to your table</title>
+<meta name="description" content="Rombola Family Farms grows seedless watermelon, rockmelons, honeydew, pumpkin and broccoli across the Riverina NSW and Mataranka NT, supplying every Australian capital city.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div style="width:100%;min-width:0;background:var(--cream)">
+
+  <!-- HEADER -->
+  <header style="background:var(--forest)">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:18px">
+      <a href="#" aria-label="Rombola Family Farms, home" style="display:block;line-height:0">
+        <img src="images/logo-white.png" alt="Rombola Family Farms" style="height:40px;width:auto">
+      </a>
+      <nav aria-label="Primary" class="nav-links">
+        <a class="nl" href="#">About Us</a>
+        <a class="nl" href="#">Sustainability</a>
+        <a class="nl" href="#">Our Produce</a>
+        <a class="nl" href="#">Blog</a>
+        <a class="nl" href="#">Careers</a>
+        <a class="btn btn-primary" href="#" style="min-height:42px;padding:0 20px;background:var(--green);color:var(--ink)">Contact us</a>
+      </nav>
+      <button class="menu-btn" type="button" aria-label="Open menu" id="menuBtn" aria-expanded="false" aria-controls="drawer">
+        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M1 1h18M1 7h18M1 13h18"/></svg>
+        Menu
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU (visual only) -->
+  <div class="drawer-wrap" id="drawer" hidden style="position:fixed;inset:0;background:rgba(24,28,30,.55);z-index:90">
+    <div role="dialog" aria-modal="true" aria-label="Menu" class="drawer" style="position:absolute;top:0;right:0;bottom:0;width:min(88vw,380px);background:#f2efe8;overflow-y:auto;box-shadow:-8px 0 24px rgba(0,0,0,.18);display:flex;flex-direction:column">
+      <div style="background:#153d24;display:flex;align-items:center;justify-content:space-between;padding:18px 20px">
+        <img src="images/logo-white.png" alt="Rombola Family Farms" style="height:36px;width:auto">
+        <button type="button" id="menuClose" class="dclose" aria-label="Close menu" style="width:44px;height:44px;border-radius:50%;border:1px solid rgba(242,239,232,.4);background:rgba(242,239,232,.08);color:#f2efe8;font-size:22px;line-height:1;cursor:pointer">&times;</button>
+      </div>
+      <nav aria-label="Mobile" style="display:flex;flex-direction:column;padding:12px 20px 0">
+        <a href="#" class="mrow">About Us<span class="marr" aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="mrow">Sustainability<span class="marr" aria-hidden="true">&rarr;</span></a>
+        <button type="button" id="produceToggle" aria-expanded="false" class="mrow" style="width:100%;background:none;border:0;border-bottom:1px solid #ddd8cc;cursor:pointer;text-align:left">Our Produce<span class="marr" id="produceIcon" aria-hidden="true">+</span></button>
+        <div id="produceList" hidden style="flex-direction:column;gap:2px;padding:10px 0 14px">
+          <a href="#" class="plink" style="display:flex;align-items:center;gap:12px;padding:8px 4px;border-radius:6px;text-decoration:none;color:#181c1e"><span style="width:48px;height:38px;flex-shrink:0;border-radius:4px;overflow:hidden;background:#ddd8cc"><img src="images/watermelon.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></span><span style="font-family:'Archivo',sans-serif;font-size:15px;font-weight:500">Seedless watermelon</span></a>
+          <a href="#" class="plink" style="display:flex;align-items:center;gap:12px;padding:8px 4px;border-radius:6px;text-decoration:none;color:#181c1e"><span style="width:48px;height:38px;flex-shrink:0;border-radius:4px;overflow:hidden;background:#ddd8cc"><img src="images/cantaloupe.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></span><span style="font-family:'Archivo',sans-serif;font-size:15px;font-weight:500">Rockmelon</span></a>
+          <a href="#" class="plink" style="display:flex;align-items:center;gap:12px;padding:8px 4px;border-radius:6px;text-decoration:none;color:#181c1e"><span style="width:48px;height:38px;flex-shrink:0;border-radius:4px;overflow:hidden;background:#ddd8cc"><img src="images/honeydew.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></span><span style="font-family:'Archivo',sans-serif;font-size:15px;font-weight:500">Honeydew</span></a>
+          <a href="#" class="plink" style="display:flex;align-items:center;gap:12px;padding:8px 4px;border-radius:6px;text-decoration:none;color:#181c1e"><span style="width:48px;height:38px;flex-shrink:0;border-radius:4px;overflow:hidden;background:#ddd8cc"><img src="images/butternut.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></span><span style="font-family:'Archivo',sans-serif;font-size:15px;font-weight:500">Pumpkin</span></a>
+          <a href="#" class="plink" style="display:flex;align-items:center;gap:12px;padding:8px 4px;border-radius:6px;text-decoration:none;color:#181c1e"><span style="width:48px;height:38px;flex-shrink:0;border-radius:4px;overflow:hidden;background:#ddd8cc"><img src="images/broccoli.jpg" alt="" style="width:100%;height:100%;object-fit:cover"></span><span style="font-family:'Archivo',sans-serif;font-size:15px;font-weight:500">Broccoli</span></a>
+        </div>
+        <a href="#" class="mrow">Blog<span class="marr" aria-hidden="true">&rarr;</span></a>
+        <a href="#" class="mrow">Careers<span class="marr" aria-hidden="true">&rarr;</span></a>
+      </nav>
+      <div style="padding:24px 20px 28px;margin-top:auto;display:flex;flex-direction:column;gap:18px">
+        <a href="#" class="dcta" style="display:block;text-align:center;background:#1d7a34;color:#fff;font-family:'Archivo',sans-serif;font-weight:600;font-size:15px;padding:14px;border-radius:6px;text-decoration:none">Contact us</a>
+        <p class="serif" style="font-size:16px;line-height:1.4;color:#153d24;text-align:center">Australian family farming; growing food &amp; community.</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-img" src="images/hero-poster.jpg" alt="Aerial view of a harvest rig working through a melon paddock">
+      <video class="hero-img hero-vid" autoplay muted loop playsinline preload="auto" poster="images/hero-poster.jpg" aria-hidden="true" tabindex="-1">
+        <source src="video/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-shade"></div>
+      <div class="wrap hero-in">
+        <p class="rise" style="font-size:14px;font-weight:600;color:#8fe09a;margin-bottom:10px;animation-delay:.05s">Riverina NSW and Mataranka NT</p>
+        <h1 id="hero-title" class="serif rise" style="font-weight:600;color:var(--cream);font-size:clamp(38px,6vw,68px);line-height:1.05;margin:0 0 16px;max-width:17ch;animation-delay:.15s">Australian family farming, from the field to your table.</h1>
+        <p class="rise" style="font-size:clamp(16px,1.4vw,19px);line-height:1.6;color:#e3e9e1;max-width:40em;margin-bottom:28px;animation-delay:.28s">Seedless watermelon, rockmelons, honeydew, pumpkin and broccoli, grown across the Riverina and the Northern Territory and supplied to every Australian capital city.</p>
+        <div class="rise" style="display:flex;flex-wrap:wrap;gap:12px;animation-delay:.4s">
+          <a class="btn btn-primary" href="#produce" style="background:var(--green);color:var(--ink)">Explore our produce</a>
+          <a class="btn btn-ghost" href="#story">Read our story</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section aria-label="Rombola Family Farms at a glance" style="padding-block:clamp(40px,5vw,64px) 0">
+      <div class="wrap">
+        <div class="stats rv">
+          <div class="stat">
+            <p class="serif" style="font-size:clamp(34px,4vw,48px);line-height:1;font-weight:600;color:var(--forest)">4,000+</p>
+            <p style="font-size:15px;line-height:1.45;color:var(--muted);margin-top:10px">hectares of horticultural land across NSW and the Northern Territory</p>
+          </div>
+          <div class="stat">
+            <p class="serif" style="font-size:clamp(34px,4vw,48px);line-height:1;font-weight:600;color:var(--forest)">300+</p>
+            <p style="font-size:15px;line-height:1.45;color:var(--muted);margin-top:10px">seasonal contract employees</p>
+          </div>
+          <div class="stat">
+            <p class="serif" style="font-size:clamp(34px,4vw,48px);line-height:1;font-weight:600;color:var(--forest)">50+</p>
+            <p style="font-size:15px;line-height:1.45;color:var(--muted);margin-top:10px">years of family farming</p>
+          </div>
+          <div class="stat">
+            <p class="serif" style="font-size:clamp(34px,4vw,48px);line-height:1;font-weight:600;color:var(--forest)">All</p>
+            <p style="font-size:15px;line-height:1.45;color:var(--muted);margin-top:10px">Australian capital cities supplied</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section id="story" aria-labelledby="story-title" style="padding-block:var(--sec)">
+      <div class="wrap story">
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div>
+            <p class="eyebrow">Our story</p>
+            <h2 id="story-title" class="h2">Farming for over fifty years, after arriving from Calabria in the 1950s.</h2>
+          </div>
+          <p class="lead">The Rombola family came to Australia from Calabria, Italy, as part of a large group of migrants who helped transform the Riverina into a productive agricultural region.</p>
+          <p class="lead">Today the business grows melons, pumpkin, broccoli and citrus across more than 4,000 hectares in New South Wales and the Northern Territory, supplying fresh produce under two flagship brands: Rombola Family Farms and Green Gro.</p>
+          <p class="serif" style="font-size:clamp(20px,2vw,26px);line-height:1.3;font-weight:500;color:var(--forest);padding-top:20px;border-top:1px solid var(--line)">We are proud to be in the fresh produce business!</p>
+          <div><a class="tlink" href="#">About us <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+        <div class="frame rv">
+          <img src="images/tractor.jpg" alt="A tractor towing a harvest trailer through a melon paddock while a crew works alongside">
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCE -->
+    <section id="produce" aria-labelledby="produce-title" style="background:var(--paper);border-block:1px solid var(--line);padding-block:var(--sec)">
+      <div class="wrap">
+        <div class="sec-head">
+          <div style="max-width:30em">
+            <p class="eyebrow">Our produce</p>
+            <h2 id="produce-title" class="h2">From the field to your table.</h2>
+          </div>
+          <p class="lead" style="max-width:28em">Temperature-controlled trucks collect our produce daily from major distribution locations across Australia.</p>
+        </div>
+        <div class="cards">
+          <article class="card rv">
+            <div class="ph"><img src="images/watermelon.jpg" alt="A seedless watermelon cut open in the paddock, bright red flesh beside an uncut melon"></div>
+            <div class="bd"><span class="chip">Harvested year-round</span><h3 class="serif" style="font-size:22px;font-weight:600">Seedless watermelon</h3><p style="font-size:15px;line-height:1.55;color:var(--muted)">Mini personal melons at 1.5 to 2.5 kg, and standard seedless from 3 to 15 kg depending on variety.</p></div>
+          </article>
+          <article class="card rv">
+            <div class="ph"><img src="images/cantaloupe.jpg" alt="A rockmelon cut in half showing orange flesh and seeds"></div>
+            <div class="bd"><span class="chip">Summer favourite</span><h3 class="serif" style="font-size:22px;font-weight:600">Rockmelon</h3><p style="font-size:15px;line-height:1.55;color:var(--muted)">Several varieties, each with its own flavour, shape and flesh colour.</p></div>
+          </article>
+          <article class="card rv">
+            <div class="ph"><img src="images/honeydew.jpg" alt="Two pale honeydew melons ripening on the vine"></div>
+            <div class="bd"><span class="chip">Harvested year-round</span><h3 class="serif" style="font-size:22px;font-weight:600">Honeydew</h3><p style="font-size:15px;line-height:1.55;color:var(--muted)">Grown in different varieties, at around 1.8 to 3.6 kg.</p></div>
+          </article>
+          <article class="card rv">
+            <div class="ph"><img src="images/butternut.jpg" alt="Butternut pumpkins on the ground among leaves"></div>
+            <div class="bd"><span class="chip">Kent and Butternut</span><h3 class="serif" style="font-size:22px;font-weight:600">Pumpkin</h3><p style="font-size:15px;line-height:1.55;color:var(--muted)">Two popular varieties, grown for kitchens across the country.</p></div>
+          </article>
+          <article class="card rv">
+            <div class="ph"><img src="images/broccoli.jpg" alt="A broccoli head growing in the field, seen from above"></div>
+            <div class="bd"><span class="chip">April to October</span><h3 class="serif" style="font-size:22px;font-weight:600">Broccoli</h3><p style="font-size:15px;line-height:1.55;color:var(--muted)">Harvested from April to October.</p></div>
+          </article>
+          <article class="card dark on-dark rv">
+            <div class="bd">
+              <p style="font-size:14px;font-weight:600;color:#8fe09a">Also in the range</p>
+              <h3 class="serif" style="font-size:26px;font-weight:600;line-height:1.15">Citrus, and more.</h3>
+              <p style="font-size:15px;line-height:1.6;color:var(--muted-d)">Talk to the team about supply across the Rombola range.</p>
+              <div><a class="btn btn-light" href="#">Browse our produce</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEASONAL CHART -->
+    <section aria-labelledby="season-title" style="padding-block:var(--sec)">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">Seasonal produce chart</p>
+            <h2 id="season-title" class="h2">In season, month by month.</h2>
+          </div>
+          <p class="lead" style="max-width:26em">Harvest windows for butternut pumpkin, pumpkin and watermelon in Bundaberg, QLD.</p>
+        </div>
+        <figure class="chart-card" aria-label="Seasonal produce chart for Bundaberg, QLD. Butternut pumpkin, pumpkin and watermelon are harvested April to May and October to December.">
+          <div class="chart-scroll">
+            <div class="chart">
+              <div class="cmonths" aria-hidden="true">
+                <span class="loc">Bundaberg, QLD</span>
+                <span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span><span>MAY</span><span>JUN</span><span>JUL</span><span>AUG</span><span>SEP</span><span>OCT</span><span>NOV</span><span>DEC</span>
+              </div>
+              <div class="crow">
+                <div class="clabel"><img class="cthumb" src="images/butternut.jpg" alt=""><span>Butternut pumpkin</span></div>
+                <div class="ctrack"></div>
+                <div class="cbar" style="grid-column:5/7">APR - MAY</div>
+                <div class="cbar" style="grid-column:11/14">OCT - DEC</div>
+              </div>
+              <div class="crow">
+                <div class="clabel"><img class="cthumb" src="images/pumpkins.jpg" alt=""><span>Pumpkin</span></div>
+                <div class="ctrack"></div>
+                <div class="cbar" style="grid-column:5/7">APR - MAY</div>
+                <div class="cbar" style="grid-column:11/14">OCT - DEC</div>
+              </div>
+              <div class="crow">
+                <div class="clabel"><img class="cthumb" src="images/watermelon.jpg" alt=""><span>Watermelon</span></div>
+                <div class="ctrack"></div>
+                <div class="cbar" style="grid-column:5/7">APR - MAY</div>
+                <div class="cbar" style="grid-column:11/14">OCT - DEC</div>
+              </div>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- REGIONS -->
+    <section aria-labelledby="regions-title" style="background:var(--paper);border-block:1px solid var(--line);padding-block:var(--sec)">
+      <div class="wrap region">
+        <figure>
+          <div class="frame rv" style="aspect-ratio:5/4">
+            <img src="images/sunrise.jpg" alt="Low sun over rows of crops stretching to the horizon, with a shed in the paddock">
+          </div>
+          <figcaption style="margin-top:12px;font-size:14px;font-weight:500;color:var(--muted)">Griffith, NSW</figcaption>
+        </figure>
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <div>
+            <p class="eyebrow">Where we grow</p>
+            <h2 id="regions-title" class="h2">Two regions, two growing climates.</h2>
+          </div>
+          <div class="rcard">
+            <h3 class="serif" style="font-size:22px;font-weight:600;color:var(--forest)">Riverina, New South Wales</h3>
+            <p style="font-size:16px;line-height:1.6;color:var(--muted);margin-top:8px">Low-lying flood plains, a warm to hot climate and irrigation water from the Murrumbidgee River. Our NSW growing is centred on the Murrumbidgee Irrigation Area.</p>
+          </div>
+          <div class="rcard">
+            <h3 class="serif" style="font-size:22px;font-weight:600;color:var(--forest)">Mataranka, Northern Territory</h3>
+            <p style="font-size:16px;line-height:1.6;color:var(--muted);margin-top:8px">A small town on the Roper River, with a sub-tropical climate and distinct wet and dry seasons.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section aria-labelledby="gallery-title" style="padding-block:var(--sec)">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">On the ground</p>
+            <h2 id="gallery-title" class="h2">From paddock to dispatch.</h2>
+          </div>
+          <p class="lead" style="max-width:28em">Harvest crews in the paddock, grading lines in the shed and trucks on the road.</p>
+        </div>
+        <div class="gallery">
+          <figure class="gi w rv">
+            <div class="gimg"><img src="images/harvest.jpg" alt="Aerial view of a harvest trailer loaded with watermelons in bins, crew working alongside a tractor"></div>
+            <figcaption>Watermelon harvest, Griffith NSW</figcaption>
+          </figure>
+          <figure class="gi rv">
+            <div class="gimg"><img src="images/walkers.jpg" alt="Two team members in hi-vis vests walking through a warehouse of stacked Rombola crates" style="object-position:38% 50%"></div>
+            <figcaption>Crates stacked and ready</figcaption>
+          </figure>
+          <figure class="gi rv">
+            <div class="gimg"><img src="images/packhouse.jpg" alt="Aerial view of the packing shed on red earth with trucks parked at the dock"></div>
+            <figcaption>The packing shed, from above</figcaption>
+          </figure>
+          <figure class="gi rv">
+            <div class="gimg"><img src="images/crates.jpg" alt="Pallets of green Rombola crates stacked across a warehouse floor" style="object-position:30% 50%"></div>
+            <figcaption>Pallets for dispatch</figcaption>
+          </figure>
+          <figure class="gi rv">
+            <div class="gimg"><img src="images/grading.jpg" alt="A grading line in a bright shed with staff sorting melons along a conveyor"></div>
+            <figcaption>On the grading line</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section aria-labelledby="values-title" class="on-dark" style="background:var(--forest);padding-block:var(--sec)">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <p class="eyebrow">Our values</p>
+            <h2 id="values-title" class="h2">Five things we hold ourselves to.</h2>
+          </div>
+          <p class="lead" style="max-width:28em">Ensuring our world's food source is long lasting using the best agricultural practices.</p>
+        </div>
+        <div class="vgrid">
+          <div class="vcard rv"><h3 class="serif" style="font-size:22px;font-weight:600;color:var(--cream)">Quality</h3><p class="lead" style="font-size:15px;margin-top:8px">Growing only the best produce and providing high-quality services.</p></div>
+          <div class="vcard rv"><h3 class="serif" style="font-size:22px;font-weight:600;color:var(--cream)">Sustainability</h3><p class="lead" style="font-size:15px;margin-top:8px">Taking responsibility for our social, environmental and ethical operations, and building a diverse, rewarding workplace.</p></div>
+          <div class="vcard rv"><h3 class="serif" style="font-size:22px;font-weight:600;color:var(--cream)">Innovation</h3><p class="lead" style="font-size:15px;margin-top:8px">Using knowledge and technology to improve horticulture, in a culture of innovation and excellence.</p></div>
+          <div class="vcard rv"><h3 class="serif" style="font-size:22px;font-weight:600;color:var(--cream)">Transparency</h3><p class="lead" style="font-size:15px;margin-top:8px">Communicating openly and honestly, and welcoming feedback.</p></div>
+          <div class="vcard rv"><h3 class="serif" style="font-size:22px;font-weight:600;color:var(--cream)">Accountability</h3><p class="lead" style="font-size:15px;margin-top:8px">Recognising our influence on consumers and stakeholders, and aiming for excellence in all areas.</p></div>
+          <div class="vcard rv" style="display:flex;align-items:center"><a class="tlink" href="#" style="color:#8fe09a">Our approach to sustainability <span aria-hidden="true">&rarr;</span></a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING / ENQUIRY -->
+    <section aria-labelledby="close-title" class="on-dark" style="background:var(--ink);padding-block:var(--sec)">
+      <div class="wrap enq">
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <p class="eyebrow" style="margin:0">Get in touch</p>
+          <h2 id="close-title" class="h2">Let's talk Rombola produce.</h2>
+          <p class="lead">Supply questions, careers and general enquiries all start with the team.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:6px">
+            <a class="btn btn-primary" href="#" style="background:var(--green);color:var(--ink)">Contact us</a>
+            <a class="btn btn-ghost" href="#">Join our team</a>
+          </div>
+        </div>
+        <form class="form" onsubmit="return false" aria-label="Enquiry form">
+          <label>Name<input type="text" name="name" autocomplete="name"></label>
+          <label>Email<input type="email" name="email" autocomplete="email"></label>
+          <label>How can we help?<textarea name="message"></textarea></label>
+          <div><button class="btn btn-primary" type="button">Send enquiry</button></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="background:var(--ink);border-top:1px solid var(--line-d);color:var(--cream)">
+    <div class="wrap" style="padding-block:48px 32px">
+      <div class="fgrid">
+        <div style="display:flex;flex-direction:column;gap:18px">
+          <img src="images/logo-white.png" alt="Rombola Family Farms" style="height:44px;width:auto;align-self:flex-start">
+          <p class="serif" style="font-size:19px;line-height:1.35;font-weight:500;color:#dfe5de;max-width:20em">Australian family farming; growing food &amp; community.</p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="fh">Explore</p>
+          <a class="fl" href="#">About Us</a>
+          <a class="fl" href="#">Sustainability</a>
+          <a class="fl" href="#">Our Produce</a>
+          <a class="fl" href="#">Blog</a>
+          <a class="fl" href="#">Careers</a>
+          <a class="fl" href="#">Contact us</a>
+        </nav>
+        <div>
+          <p class="fh">Where we grow</p>
+          <p class="fl" style="color:var(--muted-d)">Riverina, NSW</p>
+          <p class="fl" style="color:var(--muted-d)">Mataranka, NT</p>
+        </div>
+        <div>
+          <p class="fh">Follow</p>
+          <a class="fl" href="#">Facebook</a>
+          <a class="fl" href="#">Instagram</a>
+          <a class="fl" href="#">LinkedIn</a>
+        </div>
+      </div>
+      <div style="margin-top:40px;padding-top:24px;border-top:1px solid var(--line-d);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px;color:var(--muted-d)">
+        <p>© 2026 Rombola Family Farms Pty Ltd</p>
+        <p>Rombola Family Farms and Green Gro</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
